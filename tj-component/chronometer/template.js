@@ -1,0 +1,1 @@
+module.exports = '<p class="counter">Hello World!</p>\n<button class="start-btn">Start</button>\n<button class="stop-btn">Stop</button>\n<button class="reset-btn">Reset</button>\n<label>Speed:</label>\n<input class="timer-range" type="range" min="10" max="200" step="10" value="100">\n<label class="speed-label">Normal</label>\n';
