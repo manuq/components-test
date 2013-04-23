@@ -17,9 +17,21 @@
     <button class="stop-icon pull-right" title="Stop">.</button>
   </div>
   <div id="canvas">
-    <stopwatch>
-      <chronometer ng-repeat="item in ['A', 'B', 'C']" title="{{item}}"></chronometer>
-    </stopwatch>
+    <div ng-controller="StopWatchCtrl">
+      <div class="chronometer" ng-repeat="chrono in chronometers">
+        <p>{{ chrono.counter }}</p>
+        <button ng-click="chrono.start()">Start</button>
+        <button ng-click="chrono.stop()">Stop</button>
+        <button ng-click="chrono.reset()">Reset</button>
+        <label>Speed:</label>
+        <input ng-model="chrono.speed" class="timer-range" type="range"
+         min="10" max="200" step="10" value="100">
+        <label class="speed-label">{{ chrono.speed | humanizeSpeed }}</label>
+      </div>
+    </div>
+    <!-- <stopwatch> -->
+    <!--   <chronometer ng-repeat="item in ['A', 'B', 'C']" title="{{item}}"></chronometer> -->
+    <!-- </stopwatch> -->
   </div>
 </body>
 </html>

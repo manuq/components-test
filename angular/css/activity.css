@@ -15,7 +15,7 @@
   font-weight: bold;
 }
 
-#speed-label {
+.speed-label {
   display: inline-block;
   width: 5em;
 }
